@@ -1,0 +1,29 @@
+{
+    "name": "responsive-project",
+    "version": "1.0.0",
+    "description": "Create a responsive website that clones TNW's website.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/santiagorodriguezbermudez/responsive-project.git"
+    },
+    "keywords": [
+        "The next web",
+        "microverse",
+        "html",
+        "css",
+        "responsive"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/santiagorodriguezbermudez/responsive-project/issues"
+    },
+    "homepage": "https://github.com/santiagorodriguezbermudez/responsive-project#readme",
+    "devDependencies": {
+        "stylelint": "^13.3.3",
+        "stylelint-config-recommended": "^3.0.0"
+    }
+}
