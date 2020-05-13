@@ -1,16 +1,15 @@
-# Project Name
+# Buildin with responsive design
 
-> One paragraph statement about the project.
+> We're building a responsive clone of TNW website. 
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+Use Media Query to build a responsive website that clones TNW's website adapting to different screen sizes.
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- HTML,
+- CSS
 
 ## Live Demo
 
@@ -37,21 +36,19 @@ To get a local copy up and running follow these simple example steps.
 
 ### Deployment
 
-
-
 ## Authors
 
-👤 **Author1**
+👤 **Osama Aldemeery**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@aldemeery](https://github.com/aldemeery)
+- Twitter: [@aldemeery](https://twitter.com/aldemeery)
+- Linkedin: [osamaaldemeery](https://linkedin.com/in/osamaaldemeery)
 
-👤 **Author2**
+👤 **Santiago Rodriguez**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@santiagorodriguezbermudez](https://github.com/santiagorodriguezbermudez)
+- Twitter: [@srba87](https://twitter.com/srba87)
+- Linkedin: [srba87](https://www.linkedin.com/in/srba87/)
 
 ## 🤝 Contributing
 
