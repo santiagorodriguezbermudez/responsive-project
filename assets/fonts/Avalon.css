@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Avalon';
+    src: url('Avalon-Italic.woff2') format('woff2'),
+        url('Avalon-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avalon';
+    src: url('Avalon-Bold.woff2') format('woff2'),
+        url('Avalon-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avalon';
+    src: url('Avalon-Bold-Italic.woff2') format('woff2'),
+        url('Avalon-Bold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avalon';
+    src: url('AvalonPlain.woff2') format('woff2'),
+        url('AvalonPlain.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avalon';
+    src: url('Avalon-Regular.woff2') format('woff2'),
+        url('Avalon-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
