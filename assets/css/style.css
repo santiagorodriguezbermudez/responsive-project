@@ -147,15 +147,82 @@ html {
 
 .hero-header {
   grid-column: 1 / 13;
-  background-color: burlywood;
   min-height: 200px;
   margin: 0 10px;
 }
 
 .main-hero-section {
+  background: url("../img/coronavirus.png") no-repeat;
   grid-column: 1 / 13;
-  background-color: burlywood;
-  filter: brightness(0.5);
+  min-height: 400px;
+  position: relative;
+}
+
+.cover-gradient {
+  display: none;
+  height: 400px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25) url("../img/cover-gradient.png") no-repeat;
+}
+
+.cover-logo {
+  display: none;
+
+  /* z-index: 1; */
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 400px;
+  width: 50%;
+  background: url("../img/tnw.svg") no-repeat;
+}
+
+.cover-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: bottom url("../img/cover-shadow.png") repeat-x;
+}
+
+.cover-date {
+  display: none;
+  color: #fff;
+  font-size: 0.8em;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.cover-content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #fff;
+}
+
+.cover-category {
+  position: absolute;
+  top: -20px;
+  color: #fff;
+  font-size: 0.4em;
+  font-weight: 500;
+}
+
+.cover-info {
+  font-weight: 300;
+  font-size: 0.3em;
+  margin-top: 10px;
+  display: block;
+}
+
+.cover-icons {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
 .secondary-hero-section {
@@ -292,6 +359,11 @@ html {
   .top-announcement {
     font-size: 1.2em;
   }
+
+  .cover-content {
+    font-size: 2em;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -322,5 +394,16 @@ html {
   .top-announcement {
     min-height: 25px;
     justify-content: start;
+  }
+
+  .cover-gradient,
+  .cover-logo,
+  .cover-date {
+    display: block;
+  }
+
+  .cover-content {
+    width: 85%;
+    font-size: 2.6em;
   }
 }
