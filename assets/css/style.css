@@ -1,247 +1,263 @@
 /* All document */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Avalon, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Avalon, sans-serif;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
-*:before,
-*:after {
-    box-sizing: inherit;
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 10px;
 }
 
 /* Header Section */
 .navbar-logo {
-    grid-column: 1 / 3;
+  grid-column: 1 / 2;
 }
 
 .navbar {
-    grid-column: 1 / 13;
-    background-color: #fdfdfd;
-    min-height: 40px;
-    margin-top: 0px;
-    grid-gap: 0;
+  grid-column: 1 / 13;
+  background-color: #fdfdfd;
+  min-height: 40px;
+  margin-top: 0;
+  grid-gap: 0;
+}
+
+.top-links-bar {
+  grid-column: 1 / 13;
+  background-color: #131313;
+  padding: 4px 15px;
+  display: none;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
 }
 
 .top-links {
-    grid-column: 1 / 13;
-    background-color: #131313;
-    min-height: 32px;
-    display: none;
-}
-
-.top-links-left {
-    float: left;
+  display: flex;
+  padding: 5px;
+  font-size: 12px;
 }
 
 .top-links-right {
-    float: right;
+  /* float: right; */
+}
+
+.top-link {
+  align-self: center;
+  color: #ababab;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.visited {
+  color: #fff;
+}
+
+.top-link:hover {
+  color: #fff;
 }
 
 .bottom-links {
-    grid-column: 3 / 13;
-    background-color: grey;
-    min-height: 32px;
+  grid-column: 2 / 13;
+  background-color: grey;
+  min-height: 32px;
 }
 
 .top-announcement {
-    grid-column: 1 / 13;
-    background-color: #ffdd33;
-    min-height: 50px;
-    margin-top: -15px;
+  grid-column: 1 / 13;
+  background-color: #fd3;
+  min-height: 50px;
+  margin-top: -15px;
 }
 
 .sticky {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    grid-column: 1 / 13;;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  grid-column: 1 / 13;
 }
 
 .hero-header {
-    grid-column: 1 / 13;
-    background-color: burlywood;
-    min-height: 200px;
-    margin: 0 10px;
+  grid-column: 1 / 13;
+  background-color: burlywood;
+  min-height: 200px;
+  margin: 0 10px;
 }
 
 .main-hero-section {
-    grid-column: 1 / 13;
-    background-color: burlywood;
-    filter: brightness(0.5);
+  grid-column: 1 / 13;
+  background-color: burlywood;
+  filter: brightness(0.5);
 }
 
 .secondary-hero-section {
-    grid-column: 1 / 13;
-    background-color: burlywood;
-    filter: brightness(0.8);
+  grid-column: 1 / 13;
+  background-color: burlywood;
+  filter: brightness(0.8);
 }
 
 /* Main Content Body */
 .content-body {
-    grid-column: 1 / 13;
-    margin: 0 10px;
+  grid-column: 1 / 13;
+  margin: 0 10px;
 }
 
 .latest-news {
-    background-color: cyan;
-    margin: auto;
-    min-height: 300px;
-    max-width: 1152px
-    
+  background-color: cyan;
+  margin: auto;
+  min-height: 300px;
+  max-width: 1152px;
 }
 
 .latest-news h1 {
-    grid-column: 1 / 13;
+  grid-column: 1 / 13;
 }
 
 .latest-news-card {
-    grid-column: 1 / 13;
-    min-height: 20px;
-    background-color: blue;
+  grid-column: 1 / 13;
+  min-height: 20px;
+  background-color: blue;
 }
 
 .funding-news {
-    background-color: red;
-    margin: 10px auto;
-    min-height: 150px;
-    max-width: 1152px;
+  background-color: red;
+  margin: 10px auto;
+  min-height: 150px;
+  max-width: 1152px;
 }
 
 .funding-news-links {
-    grid-column: 1 / 13; 
+  grid-column: 1 / 13;
 }
 
 .funding-news-card {
-    grid-column: 1 / 13;
-    min-height: 20px;
-    background-color: blue;  
+  grid-column: 1 / 13;
+  min-height: 20px;
+  background-color: blue;
 }
 
 .content-section {
-    background-color: purple;
-    margin: 10px auto;
-    min-height: 600px;
-    max-width: 1152px;   
+  background-color: purple;
+  margin: 10px auto;
+  min-height: 600px;
+  max-width: 1152px;
 }
 
 .content-card {
-    grid-column: 1 / 13;
-    min-height: 50px;
-    background-color: blue;
+  grid-column: 1 / 13;
+  min-height: 50px;
+  background-color: blue;
 }
 
 .latest-deals {
-    background-color: red;
-    margin: 10px auto;
-    min-height: 150px;
-    max-width: 1152px;  
+  background-color: red;
+  margin: 10px auto;
+  min-height: 150px;
+  max-width: 1152px;
 }
 
 .latest-deals-links {
-    grid-column: 1 / 13;
+  grid-column: 1 / 13;
 }
 
 .latest-deals-card {
-    grid-column: 1 / 13;
-    min-height: 20px;
-    background-color: blue;  
+  grid-column: 1 / 13;
+  min-height: 20px;
+  background-color: blue;
 }
 
 /* Media queries */
 @media (min-width: 768px) {
-    .navbar {
-        margin-top: 0;
-    }
+  .navbar {
+    margin-top: 0;
+  }
 
-    .top-links {
-        display: block;
-        grid-column: 3 / 13;
-        grid-row: span 1;
-    }
-    
-    .bottom-links {
-        grid-column: 3 / 13;
-        grid-row: span 1;
-    }
+  .top-links-bar {
+    display: block;
+    grid-column: 2 / 13;
+    grid-row: span 1;
+  }
 
-    .navbar-logo {
-        grid-column: 1 / 3;
-        grid-row: span 2;
-    }
+  .bottom-links {
+    grid-column: 2 / 13;
+    grid-row: span 1;
+  }
 
-    .top-announcement {
-        min-height: 25px;
-    }
+  .navbar-logo {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+  }
 
-    .main-hero-section {
-        grid-column: 1 / 9;
-        grid-row: 1 / 3;
-    }
+  .top-announcement {
+    min-height: 25px;
+  }
 
-    .secondary-hero-section {
-        grid-column: 9 / 13;
-    }
+  .main-hero-section {
+    grid-column: 1 / 9;
+    grid-row: 1 / 3;
+  }
 
-    .latest-news-card {
-        grid-column: span 4;
-    }
+  .secondary-hero-section {
+    grid-column: 9 / 13;
+  }
 
-    .funding-news-card {
-        grid-column: span 4;
-    }
+  .latest-news-card {
+    grid-column: span 4;
+  }
 
-    .content-card {
-        grid-column: span 6;
-    }
+  .funding-news-card {
+    grid-column: span 4;
+  }
 
-    .latest-deals-card {
-        grid-column: span 4;
-    }
+  .content-card {
+    grid-column: span 6;
+  }
 
-
-
+  .latest-deals-card {
+    grid-column: span 4;
+  }
 }
+
 @media (min-width: 1024px) {
+  .bottom-links {
+    grid-column: 1 / 13;
+    display: block;
+  }
 
-    .bottom-links {
-        grid-column: 1 / 13;
-    }
-    
-    .navbar-logo {
-        display: none;
-    }
+  .navbar-logo {
+    display: none;
+  }
 
-    .top-links {
-        grid-column: 1 / 13;
-    }
+  .top-links-bar {
+    grid-column: 1 / 13;
+  }
 
-    .bottom-links {
-        display: block;
-    }
+  .latest-news-card {
+    grid-column: span 3;
+  }
 
-    .latest-news-card {
-        grid-column: span 3;
-    }
+  .content-card {
+    grid-column: span 4;
+  }
 
-    .content-card {
-        grid-column: span 4;
-    }
-
-    .latest-deals-card {
-        grid-column: span 3;
-    }
-
-
+  .latest-deals-card {
+    grid-column: span 3;
+  }
 }
