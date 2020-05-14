@@ -148,13 +148,14 @@ html {
 .hero-header {
   grid-column: 1 / 13;
   min-height: 200px;
-  margin: 0 10px;
+  margin: -8px 10px 35px;
 }
 
 .main-hero-section {
   background: url("../img/coronavirus.png") no-repeat;
   grid-column: 1 / 13;
-  min-height: 400px;
+  min-height: 200px;
+  background-size: cover;
   position: relative;
 }
 
@@ -163,12 +164,11 @@ html {
   height: 400px;
   width: 100%;
   background: rgba(0, 0, 0, 0.25) url("../img/cover-gradient.png") no-repeat;
+  background-size: cover;
 }
 
 .cover-logo {
   display: none;
-
-  /* z-index: 1; */
   position: absolute;
   top: 15px;
   left: 15px;
@@ -227,8 +227,24 @@ html {
 
 .secondary-hero-section {
   grid-column: 1 / 13;
-  background-color: burlywood;
-  filter: brightness(0.8);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 200px;
+}
+
+.first-section {
+  background-image: url("/assets/img/circles.jpg");
+  width: 100%;
+}
+
+.second-section {
+  background-image: url("/assets/img/google-calendar.png");
+  width: 100%;
+}
+
+.secondary {
+  font-size: 1.5em;
 }
 
 /* Main Content Body */
@@ -334,6 +350,7 @@ html {
   .main-hero-section {
     grid-column: 1 / 9;
     grid-row: 1 / 3;
+    min-height: 400px;
   }
 
   .secondary-hero-section {
@@ -363,6 +380,11 @@ html {
   .cover-content {
     font-size: 2em;
     width: 100%;
+  }
+
+  .secondary {
+    font-size: 1.2em;
+    width: 90%;
   }
 }
 
@@ -405,5 +427,9 @@ html {
   .cover-content {
     width: 85%;
     font-size: 2.6em;
+  }
+
+  .secondary {
+    font-size: 1.3em;
   }
 }
