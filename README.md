@@ -2,7 +2,7 @@
 
 > We're building a responsive clone of TNW website. 
 
-![screenshot](./assets/img/screenshot)
+![screenshot](./assets/img/screenshot.png)
 
 Use Media Query to build a responsive website that clones TNW's website adapting to different screen sizes.
 
@@ -13,7 +13,7 @@ Use Media Query to build a responsive website that clones TNW's website adapting
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://raw.githack.com/santiagorodriguezbermudez/responsive-project/develop/index.html)
 
 
 ## Getting Started
