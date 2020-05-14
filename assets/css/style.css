@@ -254,20 +254,66 @@ html {
 }
 
 .latest-news {
-  background-color: cyan;
   margin: auto;
   min-height: 300px;
   max-width: 1152px;
+  grid-template-rows: 35px auto;
 }
 
-.latest-news h1 {
+.next-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 28px;
+  color: #f42;
+}
+
+.latest-news .card-header {
   grid-column: 1 / 13;
+  font-weight: bold;
+  color: #f42;
+
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.card-header h1:hover {
+  color: #000;
 }
 
 .latest-news-card {
   grid-column: 1 / 13;
   min-height: 20px;
-  background-color: blue;
+  display: flex;
+  height: 110px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.card-image {
+  margin-right: 10px;
+  flex: 1 0 100px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-content {
+  font-weight: bold;
+
+  /* position: relative; */
+}
+
+.card-author {
+  font-weight: normal;
+  font-size: 15px;
+  margin-top: 5px;
+  display: inline-block;
+  color: #adadad;
 }
 
 .funding-news {
@@ -300,21 +346,31 @@ html {
   background-color: blue;
 }
 
-.latest-deals {
-  background-color: red;
-  margin: 10px auto;
-  min-height: 150px;
-  max-width: 1152px;
+.all-deals-link a {
+  color: #f42;
+  font-size: 0.8em;
+  text-decoration: none;
 }
 
-.latest-deals-links {
-  grid-column: 1 / 13;
+.deal-ribbon {
+  display: none;
+  background-image: url("../../assets/img/deals-ribbon.svg");
+  height: 75px;
+  width: 75px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.latest-deals-card {
-  grid-column: 1 / 13;
-  min-height: 20px;
-  background-color: blue;
+.discount {
+  transform: rotate(45deg) translate(28px, 0);
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.deal-card {
+  position: relative;
 }
 
 /* Media queries */
@@ -358,7 +414,14 @@ html {
   }
 
   .latest-news-card {
+    overflow: unset;
+    flex-direction: column;
+    height: 100%;
     grid-column: span 4;
+  }
+
+  .card-content {
+    margin-top: 10px;
   }
 
   .funding-news-card {
@@ -385,6 +448,10 @@ html {
   .secondary {
     font-size: 1.2em;
     width: 90%;
+  }
+
+  .deal-ribbon {
+    display: block;
   }
 }
 

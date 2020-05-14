@@ -14,3 +14,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Nav bar styles.
 - Announcement bar styles.
 - Hero image styles.
+- Secondary hero images styles.
+- Latest news & Latest deals styles.
