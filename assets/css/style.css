@@ -234,12 +234,12 @@ html {
 }
 
 .first-section {
-  background-image: url("/assets/img/circles.jpg");
+  background-image: url("../img/circles.jpg");
   width: 100%;
 }
 
 .second-section {
-  background-image: url("/assets/img/google-calendar.png");
+  background-image: url("../img/google-calendar.png");
   width: 100%;
 }
 
@@ -468,7 +468,7 @@ html {
 
 .deal-ribbon {
   display: none;
-  background-image: url("../../assets/img/deals-ribbon.svg");
+  background-image: url("../img/deals-ribbon.svg");
   height: 75px;
   width: 75px;
   position: absolute;
