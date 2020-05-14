@@ -183,7 +183,7 @@ html {
   left: 0;
   height: 100%;
   width: 100%;
-  background: bottom url("../img/cover-shadow.png") repeat-x;
+  background: linear-gradient(0deg, #111, transparent);
 }
 
 .cover-date {
@@ -267,7 +267,7 @@ html {
   color: #f42;
 }
 
-.latest-news .card-header {
+.card-header {
   grid-column: 1 / 13;
   font-weight: bold;
   color: #f42;
@@ -374,16 +374,90 @@ html {
 }
 
 .content-section {
-  background-color: purple;
+  grid-gap: 30px;
   margin: 10px auto;
-  min-height: 600px;
   max-width: 1152px;
 }
 
 .content-card {
   grid-column: 1 / 13;
   min-height: 50px;
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-card-image {
+  grid-column: 1 / 13;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 250px;
+  background-image: url("../img/google-calendar.png");
+  margin-top: 20px;
+}
+
+.content-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.underlined:hover {
+  text-decoration: underline;
+}
+
+.content-category,
+.content-author {
+  display: block;
+  font-size: 0.7em;
+}
+
+.content-author {
+  font-weight: normal;
+  color: #adadad;
+}
+
+.content-card-summary {
+  margin-top: 2px;
+  background-color: #fff4f2;
+  display: flex;
+}
+
+.content-card-summary p {
+  color: #f42;
+  padding: 15px;
+  font-weight: bold;
+  flex: 0 1 70%;
+  align-self: flex-end;
+}
+
+.content-card-summary img {
+  flex: 0 1 30%;
+}
+
+.content-items {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.content-item {
+  padding: 10px 0;
+  border-bottom: 1px #eee solid;
+  color: #5c5c5c;
+  font-size: 0.8em;
+}
+
+.content-item::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 .all-deals-link a {

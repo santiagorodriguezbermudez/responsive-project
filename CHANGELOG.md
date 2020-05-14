@@ -17,3 +17,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Secondary hero images styles.
 - Latest news & Latest deals styles.
 - Added Funding Section
+- Main content.
