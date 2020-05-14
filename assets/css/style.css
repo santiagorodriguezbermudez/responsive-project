@@ -254,10 +254,10 @@ html {
 }
 
 .latest-news {
-  margin: auto;
+  margin: 0 auto 15px;
   min-height: 300px;
   max-width: 1152px;
-  grid-template-rows: 35px auto;
+  grid-template-rows: 120px auto;
 }
 
 .next-icon {
@@ -271,9 +271,8 @@ html {
   grid-column: 1 / 13;
   font-weight: bold;
   color: #f42;
-
-  /* position: relative; */
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
@@ -304,8 +303,6 @@ html {
 
 .card-content {
   font-weight: bold;
-
-  /* position: relative; */
 }
 
 .card-author {
@@ -316,21 +313,64 @@ html {
   color: #adadad;
 }
 
-.funding-news {
-  background-color: red;
-  margin: 10px auto;
-  min-height: 150px;
-  max-width: 1152px;
-}
-
-.funding-news-links {
-  grid-column: 1 / 13;
-}
-
 .funding-news-card {
   grid-column: 1 / 13;
+  display: flex;
   min-height: 20px;
-  background-color: blue;
+  flex-direction: column;
+  position: relative;
+}
+
+.funding-news-image {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.funding-news-image img {
+  height: 60px;
+  width: 60px;
+}
+
+.funding-news-card-title {
+  background-color: #f42;
+  color: white;
+  font-weight: bold;
+  padding: 15px 15px 15px 30%;
+}
+
+.funding-news-card-number {
+  background-color: #ffece8;
+  color: #000;
+  font-weight: bold;
+  padding: 15px 15px 15px 30%;
+}
+
+.funding-news-card-number h4 {
+  padding: 0;
+}
+
+.funding-news-card-number h5 {
+  padding: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #adadad;
+}
+
+.funding-news-card-companies {
+  background-color: #fffaf9;
+  color: #000;
+  padding: 15px 20px;
+  font-size: 0.9em;
+}
+
+.funding-news-card-info {
+  border-top: #f42 solid 1px;
+  background-color: #fffaf9;
+  color: #000;
+  padding: 15px 20px;
+  font-size: 0.8em;
 }
 
 .content-section {
@@ -452,6 +492,10 @@ html {
 
   .deal-ribbon {
     display: block;
+  }
+
+  .latest-news {
+    grid-template-rows: 60px auto;
   }
 }
 
