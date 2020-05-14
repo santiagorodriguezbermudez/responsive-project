@@ -487,6 +487,63 @@ html {
   position: relative;
 }
 
+.footer {
+  grid-column: 1 / 13;
+}
+
+.footer-top {
+  background-color: #141414;
+}
+
+.footer-links,
+.footer-icons {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 15px;
+}
+
+.footer-icons i {
+  margin: 5px;
+  border: solid #333 1px;
+  border-radius: 50%;
+  background-color: #333;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icons i:hover {
+  background-color: transparent;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 0.8em;
+  margin: 0 2px;
+}
+
+.footer-bottom {
+  background-color: #000;
+}
+
+.footer-copyright {
+  color: #aaa;
+  margin: auto;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 0.8em;
+}
+
+.footer-logo {
+  height: 10px;
+  margin: 0 2px;
+}
+
 /* Media queries */
 @media (min-width: 768px) {
   .navbar {

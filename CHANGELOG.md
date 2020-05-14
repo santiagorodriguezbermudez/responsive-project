@@ -18,3 +18,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Latest news & Latest deals styles.
 - Added Funding Section
 - Main content.
+- Added footer
