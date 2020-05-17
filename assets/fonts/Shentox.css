@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Shentox';
+  src:
+    url('Shentox-UltraLight.woff2') format('woff2'),
+    url('Shentox-UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shentox';
+  src:
+    url('Shentox-Regular.woff2') format('woff2'),
+    url('Shentox-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
