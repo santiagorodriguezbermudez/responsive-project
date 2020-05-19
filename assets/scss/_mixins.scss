@@ -1,10 +1,12 @@
-// Grid child spans to different column sizes
-@mixin col($numberOfColumns) {
-  
+// Grid layout configuration
+@mixin gridLayout($numberOfColumns, $gap) {
+  display: grid;
+  grid-template-columns: repeated($numberOfColumns, minmax(0, 1fr));
+  grid-gap: ($gap);
 }
 
 //Flex mixin
-@mixin flexCenter($direction, $align, $justify) {
+@mixin flexDisplay($direction, $align, $justify) {
   display: flex;
   flex-direction: $direction;
   align-items: $align;
