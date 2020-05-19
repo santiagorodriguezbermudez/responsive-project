@@ -1,9 +1,9 @@
+@import 'reset';
+@import 'variables';
 @import 'helpers';
 @import 'classes';
 @import 'mixins';
 
-$font-stack: Avalon, sans-serif;
-$primary-color: #fdfdfd;
 
 * {
   margin: 0;
