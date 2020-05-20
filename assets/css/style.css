@@ -798,7 +798,7 @@ a {
   -ms-grid-column-span: 12;
   grid-column: 1 / 13;
   min-height: 200px;
-  margin: -8px 10px 35px;
+  margin: -9px 10px;
 }
 
 .main-hero-section {
@@ -825,7 +825,6 @@ a {
   top: 15px;
   left: 15px;
   height: 400px;
-  width: 50%;
   background: url("../img/tnw.svg") no-repeat;
 }
 
@@ -833,15 +832,13 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#111), to(transparent));
-  background: linear-gradient(0deg, #111, transparent);
+  background: -webkit-gradient(linear, left bottom, left top, from(#131313), to(transparent));
+  background: linear-gradient(0deg, #131313, transparent);
 }
 
 .cover-date {
   display: none;
-  color: #fff;
+  color: #f9f9f9;
   font-size: 0.8em;
   position: absolute;
   top: 15px;
@@ -854,28 +851,38 @@ a {
   left: 15px;
   font-size: 1.5em;
   font-weight: 700;
-  color: #fff;
+  color: #fdfdfd;
 }
 
 .cover-category {
   position: absolute;
   top: -20px;
-  color: #fff;
+  color: #fdfdfd;
   font-size: 0.4em;
   font-weight: 500;
 }
 
 .cover-info {
   font-weight: 300;
-  font-size: 0.3em;
-  margin-top: 10px;
-  display: block;
+  font-size: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .cover-icons {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 10px;
 }
 
 .secondary-hero-section {
@@ -890,12 +897,10 @@ a {
 
 .first-section {
   background-image: url("../img/circles.jpg");
-  width: 100%;
 }
 
 .second-section {
   background-image: url("../img/google-calendar.png");
-  width: 100%;
 }
 
 .secondary {
@@ -1261,7 +1266,6 @@ a {
   margin: 0 2px;
 }
 
-/* Media queries --------------------------------------------------------------------*/
 @media (min-width: 768px) {
   .navbar {
     margin-top: 0;
@@ -1379,9 +1383,9 @@ a {
         -ms-flex-pack: start;
             justify-content: start;
   }
+  .cover-date,
   .cover-gradient,
-  .cover-logo,
-  .cover-date {
+  .cover-logo {
     display: block;
   }
   .cover-content {

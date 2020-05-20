@@ -4,7 +4,7 @@
 @import 'generalClasses';
 @import 'mixins';
 
-// All document classes
+// All document classes ----------------------------------------------------------------------------
 .grid {
   @include gridLayout(12,10px);
 }
@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-// Header Section -> Navbar
+// Header Section -> Navbar ------------------------------------------------------------------------
 .navbar {
   grid-column: 1 / 13;
   background-color: $primary-color;
@@ -119,109 +119,104 @@ a {
   z-index: 1;
   grid-column: 1 / 13;
 }
-  
-  .hero-header {
-    grid-column: 1 / 13;
-    min-height: 200px;
-    margin: -8px 10px 35px;
-  }
-  
-  .main-hero-section {
-    background: url("../img/coronavirus.png") no-repeat;
-    grid-column: 1 / 13;
-    min-height: 200px;
-    background-size: cover;
-    position: relative;
-  }
-  
-  .cover-gradient {
-    display: none;
-    height: 400px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.25) url("../img/cover-gradient.png") no-repeat;
-    background-size: cover;
-  }
-  
-  .cover-logo {
-    display: none;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    height: 400px;
-    width: 50%;
-    background: url("../img/tnw.svg") no-repeat;
-  }
-  
-  .cover-shadow {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(0deg, #111, transparent);
-  }
-  
-  .cover-date {
-    display: none;
-    color: #fff;
-    font-size: 0.8em;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-  
-  .cover-content {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #fff;
-  }
-  
-  .cover-category {
-    position: absolute;
-    top: -20px;
-    color: #fff;
-    font-size: 0.4em;
-    font-weight: 500;
-  }
-  
-  .cover-info {
-    font-weight: 300;
-    font-size: 0.3em;
-    margin-top: 10px;
-    display: block;
-  }
-  
-  .cover-icons {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 10px;
-  }
-  
-  .secondary-hero-section {
-    grid-column: 1 / 13;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: 200px;
-  }
-  
-  .first-section {
-    background-image: url("../img/circles.jpg");
-    width: 100%;
-  }
-  
-  .second-section {
-    background-image: url("../img/google-calendar.png");
-    width: 100%;
-  }
-  
-  .secondary {
-    font-size: 1.5em;
-  }
-  
+
+// Hero Section ----------------------------------------------------------------------------
+.hero-header {
+  grid-column: 1 / 13;
+  min-height: 200px;
+  margin: -9px 10px;
+}
+
+.main-hero-section {
+  background: url("../img/coronavirus.png") no-repeat;
+  grid-column: 1 / 13;
+  min-height: 200px;
+  background-size: cover;
+  position: relative;
+}
+
+.cover-gradient {
+  display: none;
+  height: 400px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25) url("../img/cover-gradient.png") no-repeat;
+  background-size: cover;
+}
+
+.cover-logo {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 400px;
+  background: url("../img/tnw.svg") no-repeat;
+}
+
+.cover-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, $dark-color, transparent);
+}
+
+.cover-date {
+  display: none;
+  color: lighten($dark-color, 90%);
+  font-size: 0.8em;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.cover-content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.cover-category {
+  position: absolute;
+  top: -20px;
+  color: $primary-color;
+  font-size: 0.4em;
+  font-weight: 500;
+}
+
+.cover-info {
+  font-weight: 300;
+  font-size: 0.7rem;
+
+  @include flexDisplay(row, center, start);
+}
+
+.cover-icons {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.secondary-hero-section {
+  grid-column: 1 / 13;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 200px;
+}
+
+.first-section {
+  background-image: url("../img/circles.jpg");
+}
+
+.second-section {
+  background-image: url("../img/google-calendar.png");
+}
+
+.secondary {
+  font-size: 1.5em;
+}
+
   /* Main Content Body */
   .content-body {
     grid-column: 1 / 13;
@@ -530,48 +525,47 @@ a {
     height: 10px;
     margin: 0 2px;
   }
-  
-  /* Media queries --------------------------------------------------------------------*/
-  @media (min-width: 768px) {
-    .navbar {
-      margin-top: 0;
+
+// Tablet view ---------------------------------------------------------------------------------------
+@media (min-width: 768px) {
+  .navbar {
+    margin-top: 0;
+  }
+
+  .navbar-logo-background {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+  }
+
+  .top-links-bar {
+    display: block;
+    grid-column: 2 / 13;
+    grid-row: span 1;
+  }
+
+  .bottom-links {
+    grid-column: 2 / 13;
+    grid-row: span 1;
+
+    a {
+      display: inline;
     }
-  
-    .navbar-logo-background {
-      grid-column: 1 / 2;
-      grid-row: span 2;
-    }
-  
-    .top-links-bar {
-      display: block;
-      grid-column: 2 / 13;
-      grid-row: span 1;
-    }
-  
-    .bottom-links {
-      grid-column: 2 / 13;
-      grid-row: span 1;
-      
-      a {
-        display: inline;
-      }
-    }
-  
-  
-    .navbar-menu {
-      display: none;
-    }
-  
-    .main-hero-section {
-      grid-column: 1 / 9;
-      grid-row: 1 / 3;
-      min-height: 400px;
-    }
-  
-    .secondary-hero-section {
-      grid-column: 9 / 13;
-    }
-  
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .main-hero-section {
+    grid-column: 1 / 9;
+    grid-row: 1 / 3;
+    min-height: 400px;
+  }
+
+  .secondary-hero-section {
+    grid-column: 9 / 13;
+  }
+
     .latest-news-card {
       overflow: unset;
       flex-direction: column;
@@ -624,24 +618,24 @@ a {
   }
   
 
-  // Laptop view ---------------------------------------------------------------------------------------
-   @media (min-width: 1024px) {
-    .bottom-links {
-      grid-column: 1 / 13;
-    }
-  
-    .navbar-logo-background {
-      display: none;
-    }
-  
-    .top-links-bar {
-      grid-column: 1 / 13;
-    }
-  
-    .latest-news-card {
-      grid-column: span 3;
-    }
-  
+// Laptop view ---------------------------------------------------------------------------------------
+@media (min-width: 1024px) {
+  .bottom-links {
+    grid-column: 1 / 13;
+  }
+
+  .navbar-logo-background {
+    display: none;
+  }
+
+  .top-links-bar {
+    grid-column: 1 / 13;
+  }
+
+  .latest-news-card {
+    grid-column: span 3;
+  }
+
     .content-card {
       grid-column: span 4;
     }
@@ -655,17 +649,17 @@ a {
       justify-content: start;
     }
   
+    .cover-date,
     .cover-gradient,
-    .cover-logo,
-    .cover-date {
+    .cover-logo {
       display: block;
     }
-  
+
     .cover-content {
       width: 85%;
       font-size: 2.6em;
     }
-  
+    
     .secondary {
       font-size: 1.3em;
     }
