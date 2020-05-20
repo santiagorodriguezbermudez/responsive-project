@@ -217,314 +217,334 @@ a {
   font-size: 1.5em;
 }
 
-  /* Main Content Body */
-  .content-body {
-    grid-column: 1 / 13;
-    margin: 0 10px;
+// Main Section ----------------------------------------------------------------------------
+.content-body {
+  grid-column: 1 / 13;
+}
+
+// Latest news section ---------------------------
+.latest-news {
+  margin: 0 auto 15px;
+  min-height: 300px;
+  max-width: 1152px;
+  grid-template-rows: 120px auto;
+}
+
+.next-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 28px;
+  color: $secondary-color;
+}
+
+.card-header {
+  grid-column: 1 / 13;
+  font-weight: bold;
+  color: $secondary-color;
+  cursor: pointer;
+
+  @include flexDisplay(row, center, space-between);
+
+  flex-wrap: wrap;
+
+  h1:hover {
+    color: $dark-color;
   }
-  
-  .latest-news {
-    margin: 0 auto 15px;
-    min-height: 300px;
-    max-width: 1152px;
-    grid-template-rows: 120px auto;
+
+  i:hover {
+    color: $dark-color;
   }
-  
-  .next-icon {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 28px;
-    color: #f42;
-  }
-  
-  .card-header {
-    grid-column: 1 / 13;
-    font-weight: bold;
-    color: #f42;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  
-  .card-header h1:hover {
-    color: #000;
-  }
-  
-  .latest-news-card {
-    grid-column: 1 / 13;
-    min-height: 20px;
-    display: flex;
-    height: 110px;
-    overflow: hidden;
-    padding: 10px 0;
-  }
-  
-  .card-image {
-    margin-right: 10px;
-    flex: 1 0 100px;
-  }
-  
-  .card-image img {
+}
+
+.latest-news-card {
+  grid-column: 1 / 13;
+  min-height: 20px;
+  height: 110px;
+  overflow: hidden;
+  padding: 10px 0;
+  display: flex;
+}
+
+.card-image {
+  margin-right: 10px;
+  flex: 1 0 100px;
+
+  img {
     width: 100%;
     height: 100%;
   }
-  
-  .card-content {
-    font-weight: bold;
-  }
-  
-  .card-author {
-    font-weight: normal;
-    font-size: 15px;
-    margin-top: 5px;
-    display: inline-block;
-    color: #adadad;
-  }
-  
-  .funding-news-card {
-    grid-column: 1 / 13;
-    display: flex;
-    min-height: 20px;
-    flex-direction: column;
-    position: relative;
-  }
-  
-  .funding-news-image {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-  
-  .funding-news-image img {
+}
+
+.card-content {
+  font-weight: bold;
+}
+
+.card-author {
+  font-weight: normal;
+  font-size: 15px;
+  margin-top: 5px;
+  display: inline-block;
+  color: darken($primary-color, 30%);
+}
+
+// Latest funding Section ----------------------------------------------------------------------------
+.funding-news-card {
+  grid-column: 1 / 13;
+  min-height: 20px;
+  position: relative;
+
+  @include flexDisplay(column, stretch, stretch);
+}
+
+.funding-news-image {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  img {
     height: 60px;
     width: 60px;
   }
-  
-  .funding-links {
-    font-weight: normal;
+}
+
+.funding-links {
+  font-weight: normal;
+
+  a:hover {
+    color: $dark-color;
   }
-  
-  .all-deals-link a {
-    color: #f42;
+}
+
+.all-deals-link {
+
+  a {
+    color: $secondary-color;
     font-size: 0.8em;
     text-decoration: none;
   }
-  
-  .footer-links a {
+}
+
+.footer-links {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 15px;
+
+  a {
     text-decoration: none;
-    color: #aaa;
+    color: lighten($dark-color, 50%);
     font-size: 0.8em;
     margin: 0 2px;
   }
-  
-  .funding-links a:hover {
-    color: black;
-  }
-  
-  .funding-news-card-title {
-    background-color: #f42;
-    color: white;
-    font-weight: bold;
-    padding: 15px 15px 15px 30%;
-  }
-  
-  .funding-news-card-number {
-    background-color: #ffece8;
-    color: #000;
-    font-weight: bold;
-    padding: 15px 15px 15px 30%;
-  }
-  
-  .funding-news-card-number h4 {
+}
+
+.funding-news-card-title {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font-weight: bold;
+  padding: 15px 15px 15px 30%;
+}
+
+.funding-news-card-number {
+  background-color: $funding-color;
+  color: $dark-color;
+  font-weight: bold;
+  padding: 15px 15px 15px 30%;
+
+  h4 {
     padding: 0;
   }
-  
-  .funding-news-card-number h5 {
+
+  h5 {
     padding: 0;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 0.8em;
-    color: #adadad;
+    color: darken($primary-color, 20%);
   }
-  
-  .funding-news-card-companies {
-    background-color: #fffaf9;
-    color: #000;
-    padding: 15px 20px;
-    font-size: 0.9em;
-  }
-  
-  .funding-news-card-info {
-    border-top: #f42 solid 1px;
-    background-color: #fffaf9;
-    color: #000;
-    padding: 15px 20px;
-    font-size: 0.8em;
-  }
-  
-  .funding-disappear {
-    display: none;
-  }
-  
-  .content-section {
-    grid-gap: 30px;
-    margin: 10px auto;
-    max-width: 1152px;
-  }
-  
-  .content-card {
-    grid-column: 1 / 13;
-    min-height: 50px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .content-card-image {
-    grid-column: 1 / 13;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: 250px;
-    background-image: url("../img/google-calendar.png");
-    margin-top: 20px;
-  }
-  
-  .content-text {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .underlined:hover {
-    text-decoration: underline;
-  }
-  
-  .content-category,
-  .content-author {
-    display: block;
-    font-size: 0.7em;
-  }
-  
-  .content-author {
-    font-weight: normal;
-    color: #adadad;
-  }
-  
-  .content-card-summary {
-    margin-top: 2px;
-    background-color: #fff4f2;
-    display: flex;
-  }
-  
-  .content-card-summary p {
-    color: #f42;
+}
+
+.funding-news-card-companies {
+  background-color: lighten($funding-color, 3%);
+  color: $dark-color;
+  padding: 15px 20px;
+  font-size: 0.9em;
+}
+
+.funding-news-card-info {
+  border-top: $secondary-color solid 1px;
+  background-color: lighten($funding-color, 3%);
+  color: $dark-color;
+  padding: 15px 20px;
+  font-size: 0.8em;
+}
+
+.funding-disappear {
+  display: none;
+}
+
+// Content section ----------------------------------------------------------------------------
+.content-section {
+  grid-gap: 30px;
+  margin: 10px auto;
+  max-width: 1152px;
+}
+
+.content-card {
+  grid-column: 1 / 13;
+  min-height: 50px;
+
+  @include flexDisplay(column, stretch, stretch);
+}
+
+.content-card-image {
+  grid-column: 1 / 13;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 250px;
+  background-image: url("../img/google-calendar.png");
+  margin-top: 20px;
+  width: 100%;
+}
+
+.content-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+.underlined:hover {
+  text-decoration: underline;
+}
+
+.content-category,
+.content-author {
+  display: block;
+  font-size: 0.7em;
+}
+
+.content-author {
+  font-weight: normal;
+  color: darken($primary-color, 30%);
+}
+
+.content-card-summary {
+  margin-top: 2px;
+  background-color: $funding-color;
+  display: flex;
+
+  p {
+    color: $secondary-color;
     padding: 15px;
     font-weight: bold;
     flex: 0 1 70%;
     align-self: flex-end;
   }
-  
-  .content-card-summary img {
+
+  img {
     flex: 0 1 30%;
   }
-  
-  .content-items {
-    list-style-type: none;
-    padding-left: 15px;
-  }
-  
-  .content-item {
-    padding: 10px 0;
-    border-bottom: 1px #eee solid;
-    color: #5c5c5c;
-    font-size: 0.8em;
-  }
-  
-  .content-item::before {
-    content: "\2022";
-    color: red;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-  }
-  
-  .deal-ribbon {
-    display: none;
-    background-image: url("../img/deals-ribbon.svg");
-    height: 75px;
-    width: 75px;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  
-  .discount {
-    transform: rotate(45deg) translate(28px, 0);
-    display: inline-block;
-    font-size: 13px;
-    font-weight: bold;
-  }
-  
-  .deal-card {
-    position: relative;
-  }
-  
-  .footer {
-    grid-column: 1 / 13;
-  }
-  
-  .footer-top {
-    background-color: #141414;
-  }
-  
-  .footer-links,
-  .footer-icons {
-    width: 70%;
-    margin: auto;
-    text-align: center;
-    color: white;
-    padding: 15px;
-  }
-  
-  .footer-icons i {
+}
+
+.content-items {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.content-item {
+  padding: 10px 0;
+  border-bottom: 1px darken($primary-color, 10%) solid;
+  color: darken($primary-color, 50%);
+  font-size: 0.8em;
+}
+
+.content-item::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+// Latest deals ---------------------------------------------------------------------
+
+.deal-ribbon {
+  display: none;
+  background-image: url("../img/deals-ribbon.svg");
+  height: 75px;
+  width: 75px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.discount {
+  transform: rotate(45deg) translate(28px, 0);
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.deal-card {
+  position: relative;
+}
+
+// Foooter ------------------------------------------------------------------
+.footer {
+  grid-column: 1 / 13;
+}
+
+.footer-top {
+  background-color: lighten($dark-color, 5%);
+}
+
+.footer-icons {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  color: darken($primary-color, 2%);
+  padding: 15px;
+
+  i {
     margin: 5px;
-    border: solid #333 1px;
+    border: solid lighten($dark-color, 10%) 1px;
     border-radius: 50%;
-    background-color: #333;
+    background-color: lighten($dark-color, 10%);
     width: 30px;
     height: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
-  
-  .footer-icons i:hover {
+
+  i:hover {
     background-color: transparent;
   }
-  
-  .footer-bottom {
-    background-color: #000;
-  }
-  
-  .footer-copyright {
-    color: #aaa;
-    margin: auto;
-    text-align: center;
-    padding: 50px 0;
-    font-size: 0.8em;
-  }
-  
-  .footer-logo {
-    height: 10px;
-    margin: 0 2px;
-  }
+}
+
+.footer-bottom {
+  background-color: $dark-color;
+}
+
+.footer-copyright {
+  color: lighten($dark-color, 50%);
+  margin: auto;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 0.8em;
+}
+
+.footer-logo {
+  height: 10px;
+  margin: 0 2px;
+}
 
 // Tablet view ---------------------------------------------------------------------------------------
 @media (min-width: 768px) {
@@ -566,57 +586,56 @@ a {
     grid-column: 9 / 13;
   }
 
-    .latest-news-card {
-      overflow: unset;
-      flex-direction: column;
-      height: 100%;
-      grid-column: span 4;
-    }
-  
-    .card-content {
-      margin-top: 10px;
-    }
-  
-    .funding-news-card {
-      grid-column: span 4;
-    }
-  
-    .funding-news-card-title,
-    .funding-news-card-number {
-      padding-left: 35%;
-    }
-  
-    .content-card {
-      grid-column: span 6;
-    }
-  
-    .latest-deals-card {
-      grid-column: span 4;
-    }
-  
-    .top-announcement {
-      font-size: 1.2em;
-    }
-  
-    .cover-content {
-      font-size: 2em;
-      width: 100%;
-    }
-  
-    .secondary {
-      font-size: 1.2em;
-      width: 90%;
-    }
-  
-    .deal-ribbon {
-      display: block;
-    }
-  
-    .latest-news {
-      grid-template-rows: 60px auto;
-    }
+  .latest-news-card {
+    overflow: unset;
+    flex-direction: column;
+    height: 100%;
+    grid-column: span 4;
   }
-  
+
+  .card-content {
+    margin-top: 10px;
+  }
+
+  .funding-news-card {
+    grid-column: span 4;
+  }
+
+  .funding-news-card-title,
+  .funding-news-card-number {
+    padding-left: 35%;
+  }
+
+  .content-card {
+    grid-column: span 6;
+  }
+
+  .latest-deals-card {
+    grid-column: span 4;
+  }
+
+  .top-announcement {
+    font-size: 1.2em;
+  }
+
+  .cover-content {
+    font-size: 2em;
+    width: 100%;
+  }
+
+  .secondary {
+    font-size: 1.2em;
+    width: 90%;
+  }
+
+  .deal-ribbon {
+    display: block;
+  }
+
+  .latest-news {
+    grid-template-rows: 60px auto;
+  }
+}
 
 // Laptop view ---------------------------------------------------------------------------------------
 @media (min-width: 1024px) {
@@ -636,42 +655,42 @@ a {
     grid-column: span 3;
   }
 
-    .content-card {
-      grid-column: span 4;
-    }
-  
-    .latest-deals-card {
-      grid-column: span 3;
-    }
-  
-    .top-announcement {
-      min-height: 25px;
-      justify-content: start;
-    }
-  
-    .cover-date,
-    .cover-gradient,
-    .cover-logo {
-      display: block;
-    }
-
-    .cover-content {
-      width: 85%;
-      font-size: 2.6em;
-    }
-    
-    .secondary {
-      font-size: 1.3em;
-    }
-  
-    .funding-disappear {
-      display: block;
-    }
-  
-    .funding-news-card {
-      grid-column: span 3;
-    }
+  .content-card {
+    grid-column: span 4;
   }
+
+  .latest-deals-card {
+    grid-column: span 3;
+  }
+
+  .top-announcement {
+    min-height: 25px;
+    justify-content: start;
+  }
+
+  .cover-date,
+  .cover-gradient,
+  .cover-logo {
+    display: block;
+  }
+
+  .cover-content {
+    width: 85%;
+    font-size: 2.6em;
+  }
+
+  .secondary {
+    font-size: 1.3em;
+  }
+
+  .funding-disappear {
+    display: block;
+  }
+
+  .funding-news-card {
+    grid-column: span 3;
+  }
+}
 
 // @import 'tablet';
 // @import 'laptop';

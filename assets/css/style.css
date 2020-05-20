@@ -907,12 +907,10 @@ a {
   font-size: 1.5em;
 }
 
-/* Main Content Body */
 .content-body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-column: 1 / 13;
-  margin: 0 10px;
 }
 
 .latest-news {
@@ -936,22 +934,30 @@ a {
   grid-column: 1 / 13;
   font-weight: bold;
   color: #f42;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  cursor: pointer;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .card-header h1:hover {
-  color: #000;
+  color: #131313;
+}
+
+.card-header i:hover {
+  color: #131313;
 }
 
 .latest-news-card {
@@ -959,12 +965,12 @@ a {
   -ms-grid-column-span: 12;
   grid-column: 1 / 13;
   min-height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 110px;
   overflow: hidden;
   padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .card-image {
@@ -988,22 +994,28 @@ a {
   font-size: 15px;
   margin-top: 5px;
   display: inline-block;
-  color: #adadad;
+  color: #b1b1b1;
 }
 
 .funding-news-card {
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-column: 1 / 13;
+  min-height: 20px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
 }
 
 .funding-news-image {
@@ -1021,33 +1033,41 @@ a {
   font-weight: normal;
 }
 
+.funding-links a:hover {
+  color: #131313;
+}
+
 .all-deals-link a {
   color: #f42;
   font-size: 0.8em;
   text-decoration: none;
 }
 
+.footer-links {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 15px;
+}
+
 .footer-links a {
   text-decoration: none;
-  color: #aaa;
+  color: #939393;
   font-size: 0.8em;
   margin: 0 2px;
 }
 
-.funding-links a:hover {
-  color: black;
-}
-
 .funding-news-card-title {
   background-color: #f42;
-  color: white;
+  color: #fdfdfd;
   font-weight: bold;
   padding: 15px 15px 15px 30%;
 }
 
 .funding-news-card-number {
   background-color: #ffece8;
-  color: #000;
+  color: #131313;
   font-weight: bold;
   padding: 15px 15px 15px 30%;
 }
@@ -1061,20 +1081,20 @@ a {
   font-weight: 500;
   text-transform: uppercase;
   font-size: 0.8em;
-  color: #adadad;
+  color: #cacaca;
 }
 
 .funding-news-card-companies {
-  background-color: #fffaf9;
-  color: #000;
+  background-color: #fff9f7;
+  color: #131313;
   padding: 15px 20px;
   font-size: 0.9em;
 }
 
 .funding-news-card-info {
   border-top: #f42 solid 1px;
-  background-color: #fffaf9;
-  color: #000;
+  background-color: #fff9f7;
+  color: #131313;
   padding: 15px 20px;
   font-size: 0.8em;
 }
@@ -1101,18 +1121,25 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
 }
 
 .content-card-image {
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-column: 1 / 13;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   min-height: 250px;
   background-image: url("../img/google-calendar.png");
   margin-top: 20px;
+  width: 100%;
 }
 
 .content-text {
@@ -1121,7 +1148,7 @@ a {
   left: 15px;
   font-size: 1.2em;
   font-weight: bold;
-  color: #fff;
+  color: #fdfdfd;
   cursor: pointer;
 }
 
@@ -1137,12 +1164,12 @@ a {
 
 .content-author {
   font-weight: normal;
-  color: #adadad;
+  color: #b1b1b1;
 }
 
 .content-card-summary {
   margin-top: 2px;
-  background-color: #fff4f2;
+  background-color: #ffece8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1172,8 +1199,8 @@ a {
 
 .content-item {
   padding: 10px 0;
-  border-bottom: 1px #eee solid;
-  color: #5c5c5c;
+  border-bottom: 1px #e4e4e4 solid;
+  color: #7e7e7e;
   font-size: 0.8em;
 }
 
@@ -1215,23 +1242,22 @@ a {
 }
 
 .footer-top {
-  background-color: #141414;
+  background-color: #202020;
 }
 
-.footer-links,
 .footer-icons {
   width: 70%;
   margin: auto;
   text-align: center;
-  color: white;
+  color: #f8f8f8;
   padding: 15px;
 }
 
 .footer-icons i {
   margin: 5px;
-  border: solid #333 1px;
+  border: solid #2d2d2d 1px;
   border-radius: 50%;
-  background-color: #333;
+  background-color: #2d2d2d;
   width: 30px;
   height: 30px;
   display: -webkit-inline-box;
@@ -1250,11 +1276,11 @@ a {
 }
 
 .footer-bottom {
-  background-color: #000;
+  background-color: #131313;
 }
 
 .footer-copyright {
-  color: #aaa;
+  color: #939393;
   margin: auto;
   text-align: center;
   padding: 50px 0;
