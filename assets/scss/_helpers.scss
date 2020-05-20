@@ -1,0 +1,9 @@
+@function repeated($n, $text) {
+  $c: "";
+
+  @for $i from 1 through $n {
+    $c: $c + " " + $text;
+  }
+
+  @return(unquote($c));
+}

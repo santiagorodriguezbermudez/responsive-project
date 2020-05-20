@@ -1,0 +1,551 @@
+@import 'reset';
+@import 'variables';
+@import 'helpers';
+@import 'generalClasses';
+@import 'mixins';
+
+// All document classes ----------------------------------------------------------------------------
+.grid {
+  @include gridLayout(12,10px);
+}
+
+a {
+  text-decoration: none;
+}
+
+// Header Section -> Navbar ------------------------------------------------------------------------
+.navbar {
+  grid-column: 1 / 13;
+  background-color: $primary-color;
+  margin-top: 0;
+  grid-gap: 0;
+}
+
+.navbar-logo-background {
+  grid-column: 1 / 3;
+  background: linear-gradient(to bottom right, $third-color, $secondary-color 85%);
+  min-height: 40px;
+
+  @include flexDisplay (row, center, center);
+}
+
+.navbar-logo {
+  display: inline-block;
+}
+
+.top-links-bar {
+  padding: 0.5rem;
+  grid-column: 1 / 13;
+  background-color: $dark-color;
+  display: none;
+}
+
+.all-deals-link {
+  a {
+    color: $secondary-color;
+    font-size: 0.8em;
+    text-decoration: none;
+  }
+}
+
+.footer-links {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 15px;
+
+  a {
+    text-decoration: none;
+    color: lighten($dark-color, 50%);
+    font-size: 0.8em;
+    margin: 0 2px;
+  }
+}
+
+.top-links {
+  @include flexDisplay (row, center, center);
+
+  padding: 5px 0;
+  font-size: 12px;
+
+  a {
+    align-self: center;
+    color: lighten($dark-color, 60%);
+    margin-right: 15px;
+  }
+
+  .visited {
+    color: $primary-color;
+  }
+}
+
+.bottom-links {
+  grid-column: 3 / 13;
+  background-color: $primary-color;
+
+  @include flexDisplay(row, center, center);
+
+  a {
+    align-self: center;
+    font-family: $font-second-stack;
+    color: darken($primary-color, 30%);
+    text-transform: uppercase;
+    margin-right: 10px;
+    display: none;
+  }
+
+  div {
+    @include flexDisplay(row, center, center);
+  }
+}
+
+.top-links a:hover {
+  color: $primary-color;
+}
+
+.bottom-links a:hover {
+  color: $dark-color;
+}
+
+.navbar-search {
+  justify-self: end;
+  color: darken($primary-color, 30%);
+  border-left: solid;
+  border-width: 1px;
+  border-color: darken($primary-color, 30%);
+}
+
+.navbar-menu {
+  color: $secondary-color;
+  border-left: solid;
+  border-width: 1px;
+  border-color: darken($primary-color, 30%);
+}
+
+.top-announcement {
+  grid-column: 1 / 13;
+  background-color: $announcement-color;
+  min-height: 50px;
+  margin-top: -15px;
+
+  @include flexDisplay(row, center, center);
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  grid-column: 1 / 13;
+}
+
+// Hero Section ----------------------------------------------------------------------------
+.hero-header {
+  grid-column: 1 / 13;
+  min-height: 200px;
+  margin: -9px 10px;
+}
+
+.main-hero-section {
+  background: url("../img/coronavirus.png") no-repeat;
+  grid-column: 1 / 13;
+  min-height: 200px;
+  background-size: cover;
+  position: relative;
+}
+
+.cover-gradient {
+  display: none;
+  height: 400px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25) url("../img/cover-gradient.png") no-repeat;
+  background-size: cover;
+}
+
+.cover-logo {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 400px;
+  background: url("../img/tnw.svg") no-repeat;
+}
+
+.cover-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, $dark-color, transparent);
+  width: 100%;
+  height: 100%;
+}
+
+.cover-date {
+  display: none;
+  color: lighten($dark-color, 90%);
+  font-size: 0.8em;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.cover-content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.cover-category {
+  position: absolute;
+  top: -20px;
+  color: $primary-color;
+  font-size: 0.4em;
+  font-weight: 500;
+}
+
+.cover-info {
+  font-weight: 300;
+  font-size: 0.7rem;
+
+  @include flexDisplay(row, center, start);
+}
+
+.cover-icons {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.secondary-hero-section {
+  grid-column: 1 / 13;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 200px;
+}
+
+.first-section {
+  background-image: url("../img/circles.jpg");
+}
+
+.second-section {
+  background-image: url("../img/google-calendar.png");
+}
+
+.secondary {
+  font-size: 1.5em;
+}
+
+// Main Section ----------------------------------------------------------------------------
+.content-body {
+  grid-column: 1 / 13;
+}
+
+// Latest news section ---------------------------
+.latest-news {
+  margin: 0 auto 15px;
+  min-height: 300px;
+  max-width: 1152px;
+  grid-template-rows: 120px auto;
+}
+
+.next-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 28px;
+  color: $secondary-color;
+}
+
+.footer-icons {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  color: darken($primary-color, 2%);
+  padding: 15px;
+
+  i {
+    margin: 5px;
+    border: solid lighten($dark-color, 10%) 1px;
+    border-radius: 50%;
+    background-color: lighten($dark-color, 10%);
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  i:hover {
+    background-color: transparent;
+  }
+}
+
+.card-header {
+  grid-column: 1 / 13;
+  font-weight: bold;
+  color: $secondary-color;
+  cursor: pointer;
+
+  @include flexDisplay(row, center, space-between);
+
+  flex-wrap: wrap;
+
+  h1:hover {
+    color: $dark-color;
+  }
+
+  i:hover {
+    color: $dark-color;
+  }
+}
+
+.latest-news-card {
+  grid-column: 1 / 13;
+  min-height: 20px;
+  height: 110px;
+  overflow: hidden;
+  padding: 10px 0;
+  display: flex;
+}
+
+.card-image {
+  margin-right: 10px;
+  flex: 1 0 100px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card-content {
+  font-weight: bold;
+}
+
+.card-author {
+  font-weight: normal;
+  font-size: 15px;
+  margin-top: 5px;
+  display: inline-block;
+  color: darken($primary-color, 30%);
+}
+
+// Latest funding Section ----------------------------------------------------------------------------
+.funding-news-card {
+  grid-column: 1 / 13;
+  min-height: 20px;
+  position: relative;
+
+  @include flexDisplay(column, stretch, stretch);
+}
+
+.funding-news-image {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.funding-links {
+  font-weight: normal;
+
+  a:hover {
+    color: $dark-color;
+  }
+}
+
+.funding-news-card-title {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font-weight: bold;
+  padding: 15px 15px 15px 30%;
+}
+
+.funding-news-card-number {
+  background-color: $funding-color;
+  color: $dark-color;
+  font-weight: bold;
+  padding: 15px 15px 15px 30%;
+
+  h4 {
+    padding: 0;
+  }
+
+  h5 {
+    padding: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: darken($primary-color, 20%);
+  }
+}
+
+.funding-news-card-companies {
+  background-color: lighten($funding-color, 3%);
+  color: $dark-color;
+  padding: 15px 20px;
+  font-size: 0.9em;
+}
+
+.funding-news-card-info {
+  border-top: $secondary-color solid 1px;
+  background-color: lighten($funding-color, 3%);
+  color: $dark-color;
+  padding: 15px 20px;
+  font-size: 0.8em;
+}
+
+.funding-disappear {
+  display: none;
+}
+
+// Content section ----------------------------------------------------------------------------
+.content-section {
+  grid-gap: 30px;
+  margin: 10px auto;
+  max-width: 1152px;
+}
+
+.content-card {
+  grid-column: 1 / 13;
+  min-height: 50px;
+
+  @include flexDisplay(column, stretch, stretch);
+}
+
+.content-card-image {
+  grid-column: 1 / 13;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 250px;
+  background-image: url("../img/google-calendar.png");
+  margin-top: 20px;
+  width: 100%;
+}
+
+.content-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+.underlined:hover {
+  text-decoration: underline;
+}
+
+.content-category,
+.content-author {
+  display: block;
+  font-size: 0.7em;
+}
+
+.content-author {
+  font-weight: normal;
+  color: darken($primary-color, 30%);
+}
+
+.content-card-summary {
+  margin-top: 2px;
+  background-color: $funding-color;
+  display: flex;
+
+  p {
+    color: $secondary-color;
+    padding: 15px;
+    font-weight: bold;
+    flex: 0 1 70%;
+    align-self: flex-end;
+  }
+
+  img {
+    flex: 0 1 30%;
+  }
+}
+
+.content-items {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.content-item {
+  padding: 10px 0;
+  border-bottom: 1px darken($primary-color, 10%) solid;
+  color: darken($primary-color, 50%);
+  font-size: 0.8em;
+}
+
+.content-item::before {
+  content: "\2022";
+  color: $secondary-color;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+// Latest deals ---------------------------------------------------------------------
+
+.deal-ribbon {
+  display: none;
+  background-image: url("../img/deals-ribbon.svg");
+  height: 75px;
+  width: 75px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.discount {
+  transform: rotate(45deg) translate(28px, 0);
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.deal-card {
+  position: relative;
+}
+
+// Foooter ------------------------------------------------------------------
+.footer {
+  grid-column: 1 / 13;
+}
+
+.footer-top {
+  background-color: lighten($dark-color, 5%);
+}
+
+.footer-bottom {
+  background-color: $dark-color;
+}
+
+.footer-copyright {
+  color: lighten($dark-color, 50%);
+  margin: auto;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 0.8em;
+}
+
+.footer-logo {
+  height: 10px;
+  margin: 0 2px;
+}
+
+@import 'tablet';
+@import 'laptop';

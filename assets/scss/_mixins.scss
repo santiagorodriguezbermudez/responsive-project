@@ -1,0 +1,14 @@
+// Grid layout configuration
+@mixin gridLayout($numberOfColumns, $gap) {
+  display: grid;
+  grid-template-columns: repeated($numberOfColumns, minmax(0, 1fr));
+  grid-gap: ($gap);
+}
+
+//Flex mixin
+@mixin flexDisplay($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
