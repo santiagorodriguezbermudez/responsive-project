@@ -1,4 +1,4 @@
-# Buildin with responsive design
+# Building with responsive design
 
 > We're building a responsive clone of TNW website. 
 
@@ -9,7 +9,8 @@ Use Media Query to build a responsive website that clones TNW's website adapting
 ## Built With
 
 - HTML,
-- CSS
+- CSS,
+- SCSS compiler
 
 ## Live Demo
 
