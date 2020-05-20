@@ -491,7 +491,7 @@ a {
 
 .content-item::before {
   content: "\2022";
-  color: red;
+  color: $secondary-color;
   font-weight: bold;
   display: inline-block;
   width: 1em;
