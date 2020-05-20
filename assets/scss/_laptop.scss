@@ -1,3 +1,54 @@
+// Laptop view ---------------------------------------------------------------------------------------
 @media (min-width: 1024px) {
-    
+  .bottom-links {
+    grid-column: 1 / 13;
+  }
+
+  .navbar-logo-background {
+    display: none;
+  }
+
+  .top-links-bar {
+    grid-column: 1 / 13;
+  }
+
+  .latest-news-card {
+    grid-column: span 3;
+  }
+
+  .content-card {
+    grid-column: span 4;
+  }
+
+  .latest-deals-card {
+    grid-column: span 3;
+  }
+
+  .top-announcement {
+    min-height: 25px;
+    justify-content: start;
+  }
+
+  .cover-date,
+  .cover-gradient,
+  .cover-logo {
+    display: block;
+  }
+
+  .cover-content {
+    width: 85%;
+    font-size: 2.6em;
+  }
+
+  .secondary {
+    font-size: 1.3em;
+  }
+
+  .funding-disappear {
+    display: block;
+  }
+
+  .funding-news-card {
+    grid-column: span 3;
+  }
 }
