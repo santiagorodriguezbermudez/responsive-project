@@ -9,7 +9,11 @@
   @include gridLayout(12,10px);
 }
 
-// Header Section
+a {
+  text-decoration: none;
+}
+
+// Header Section -> Navbar
 .navbar {
   grid-column: 1 / 13;
   background-color: $primary-color;
@@ -19,7 +23,7 @@
 
 .navbar-logo-background {
   grid-column: 1 / 3;
-  background: linear-gradient(to bottom right, $third-color,$secondary-color 85%);
+  background: linear-gradient(to bottom right, $third-color, $secondary-color 85%);
   min-height: 40px;
 
   @include flexDisplay (row, center, center);
@@ -30,9 +34,9 @@
 }
 
 .top-links-bar {
+  padding: 0.5rem;
   grid-column: 1 / 13;
   background-color: $dark-color;
-  padding: 4px 10px;
   display: none;
 }
 
@@ -45,84 +49,76 @@
   a {
     align-self: center;
     color: lighten($dark-color, 60%);
-    text-decoration: none;
     margin-right: 15px;
   }
 
   .visited {
     color: $primary-color;
   }
-
-  a:hover {
-    color: $primary-color;
-  }
 }
 
-  .bottom-links {
-    grid-column: 3 / 13;
-    background-color: #fdfdfd;
-    padding-left: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .bottom-link {
+.bottom-links {
+  grid-column: 3 / 13;
+  background-color: $primary-color;
+
+  @include flexDisplay(row, center, center);
+
+  a {
     align-self: center;
-    font-family: Shentox, sans-serif;
-    color: #a9a9a9;
+    font-family: $font-second-stack;
+    color: darken($primary-color, 30%);
     text-transform: uppercase;
-    text-decoration: none;
     margin-right: 10px;
     display: none;
   }
-  
-  .bottom-link:hover {
-    color: black;
+
+  div {
+    @include flexDisplay(row, center, center);
   }
-  
-  .bottom-link-last {
-    margin-left: auto;
+}
+
+.top-links a:hover {
+  color: $primary-color;
+}
+
+.bottom-links a:hover {
+  color: $dark-color;
+}
+
+.navbar-search {
+  justify-self: end;
+  color: darken($primary-color, 30%);
+  border-left: solid;
+  border-width: 1px;
+  border-color: darken($primary-color, 30%);
+}
+
+.navbar-menu {
+  color: $secondary-color;
+  border-left: solid;
+  border-width: 1px;
+  border-color: darken($primary-color, 30%);
+}
+
+.top-announcement {
+  grid-column: 1 / 13;
+  background-color: $announcement-color;
+  min-height: 50px;
+  margin-top: -15px;
+
+  @include flexDisplay(row, center, center);
+
+  p {
+    font-size: 1rem;
   }
-  
-  .navbar-search {
-    justify-self: end;
-    color: #a9a9a9;
-    border-left: solid;
-    border-width: 1px;
-    border-color: #a9a9a9;
-    padding: 15px;
-  }
-  
-  .navbar-menu {
-    margin-left: 5px;
-    color: red;
-    border-left: solid;
-    border-width: 1px;
-    border-color: #a9a9a9;
-    padding: 15px;
-  }
-  
-  .top-announcement {
-    grid-column: 1 / 13;
-    background-color: #fd3;
-    min-height: 50px;
-    margin-top: -15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10px;
-  }
-  
-  .top-announcement p {
-    font-size: 0.7em;
-  }
-  
-  .sticky {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    grid-column: 1 / 13;
-  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  grid-column: 1 / 13;
+}
   
   .hero-header {
     grid-column: 1 / 13;
@@ -535,7 +531,7 @@
     margin: 0 2px;
   }
   
-  /* Media queries */
+  /* Media queries --------------------------------------------------------------------*/
   @media (min-width: 768px) {
     .navbar {
       margin-top: 0;
@@ -555,11 +551,12 @@
     .bottom-links {
       grid-column: 2 / 13;
       grid-row: span 1;
+      
+      a {
+        display: inline;
+      }
     }
   
-    .bottom-link {
-      display: inline;
-    }
   
     .navbar-menu {
       display: none;
@@ -626,7 +623,9 @@
     }
   }
   
-  @media (min-width: 1024px) {
+
+  // Laptop view ---------------------------------------------------------------------------------------
+   @media (min-width: 1024px) {
     .bottom-links {
       grid-column: 1 / 13;
     }
@@ -680,5 +679,5 @@
     }
   }
 
-@import 'tablet';
-@import 'laptop';
+// @import 'tablet';
+// @import 'laptop';
