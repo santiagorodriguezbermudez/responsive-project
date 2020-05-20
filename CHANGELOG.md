@@ -9,13 +9,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Basic layout of the entire page.
-- Top nav bar styles across all screens.
-- Nav bar styles.
-- Announcement bar styles.
-- Hero image styles.
-- Secondary hero images styles.
-- Latest news & Latest deals styles.
-- Added Funding Section
-- Main content.
-- Added footer
+- Re-factor code using stylelints
