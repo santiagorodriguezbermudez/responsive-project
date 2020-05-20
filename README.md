@@ -14,7 +14,7 @@ Use Media Query to build a responsive website that clones TNW's website adapting
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/santiagorodriguezbermudez/responsive-project/develop/index.html)
+[Live Demo Link](https://raw.githack.com/santiagorodriguezbermudez/responsive-project/master/index.html)
 
 
 ## Getting Started
